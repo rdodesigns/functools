@@ -6,20 +6,19 @@
 %
 %   Examples
 %   --------
+%   list = [1, 2, 3];
+%   concatmap(@(y) (y+3), list)
 %
-%       list = [1, 2, 3];
-%       concatMap(@(y) (y+3), list)
+%   ans =
 %
-%       ans =
+%        4     5     6
 %
-%            4     5     6
+%   concatmap(@(k) ({k; k^2}), [1:5])
 %
-%       concatMap(@(k) ({k; k^2}), [1:5])
+%   ans =
 %
-%       ans =
-%
-%           [1]    [2]    [3]    [ 4]    [ 5]
-%           [1]    [4]    [9]    [16]    [25]
+%       [1]    [2]    [3]    [ 4]    [ 5]
+%       [1]    [4]    [9]    [16]    [25]
 
 function out = concatmap(f, list)
   import functools.list.foldr
