@@ -16,7 +16,7 @@
 %
 %   %% The standard echo string case.
 %
-%   print_buffer = printOver();
+%   print_buffer = printover();
 %   for k = 1:100
 %     print_buffer(sprintf('%*d %*d', 3, k, 3, k));
 %     pause(1/30);
@@ -25,14 +25,14 @@
 %
 %   %% The applied function case
 %
-%   print_buffer = printOver(@sprintf);
+%   print_buffer = printover(@sprintf);
 %   for k = 1:100
 %     print_buffer('%*d %*d', 3, k, 3, k);
 %     pause(1/30);
 %   end
 %   fprintf('\n')
 
-function out = printOver(f)
+function out = printover(f)
 
   % By default, use echo.
   if nargin == 0
