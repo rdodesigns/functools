@@ -3,21 +3,21 @@
 %   Enumerates all the subsequnces of an input list. The result is a cell
 %   array. Do not use of lists larger than 15 elements.
 %
-%   For example
+%   Examples
+%   --------
+%   a = 'abc';
+%   subsequences(a)
 %
-%       a = 'abc';
+%   ans =
 %
-%       subsequences(a)
-%
-%       ans =
-%
-%           'a'    'b'    'c'    'ab'    'ac'    'bc'    'abc'
+%       'a'    'b'    'c'    'ab'    'ac'    'bc'    'abc'
 
 function out = subsequences(list)
 
   n = length(list);
 
-  %% Add each element to the subsequent list, since nchoosek will not do this.
+  % Add each element to the subsequent list, since nchoosek will not do
+  % this.
   subsequence = num2cell(list.',2);
 
   for k = 2:n
