@@ -6,13 +6,13 @@
 %
 %   Examples
 %   --------
-%       step_counter = BufferedFoldl(@plus, 0);
-%       step_counter()      % 0
-%       step_counter(1)     % 1
-%       step_counter()      % 1
-%       step_counter(7)     % 8
-%       step_counter()      % 8
-%       step_counter([1,2]) % 11
+%   step_counter = bufferfoldl(@plus, 0);
+%   step_counter()      % 0
+%   step_counter(1)     % 1
+%   step_counter()      % 1
+%   step_counter(7)     % 8
+%   step_counter()      % 8
+%   step_counter([1,2]) % 11
 %
 %   See also FOLDL, FOLDR, FOLDL1, FOLDR1, BUFFERFOLDR
 
