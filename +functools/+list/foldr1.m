@@ -3,7 +3,7 @@
 %   See also FOLDR, FOLDR, FOLDR1, BUFFERFOLDL, BUFFERFOLDR
 
 function out = foldr1(accumulator, list)
-  import functools.list.foldr1
+  import functools.list.foldr
 
   switch nargin
     case 1
