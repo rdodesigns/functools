@@ -20,19 +20,19 @@
 %
 %   Examples
 %   --------
-%       foldl(@plus, 0, 1:10) == 55;
+%   foldl(@plus, 0, 1:10) == 55;
 %
-%       % The sum function as a fold.
-%       sum2 = foldl(@plus, 0);
-%       sum2(1:10) == sum(1:10)
+%   % The sum function as a fold.
+%   sum2 = foldl(@plus, 0);
+%   sum2(1:10) == sum(1:10)
 %
-%       % The prod function as a fold.
-%       mult = foldl(@dot, 1);
-%       mult(1:10) == prod(1:10)
+%   % The prod function as a fold.
+%   mult = foldl(@dot, 1);
+%   mult(1:10) == prod(1:10)
 %
-%       % The horizontal cat function as a fold.
-%       horzcat2 = foldl(@(x, y) [x y]);
-%       horzcat2([1 2], [3 4] ) == [1 2 3 4]
+%   % The horizontal cat function as a fold.
+%   horzcat2 = foldl(@(x, y) [x y]);
+%   horzcat2([1 2], [3 4] ) == [1 2 3 4]
 %
 %   Algorithm copied from http://goo.gl/HgoAG3
 %
