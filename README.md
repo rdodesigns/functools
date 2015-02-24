@@ -42,3 +42,39 @@ addpath('functools')
 
 Start a new instance of Matlab and the functools package should be ready to
 use.
+
+
+Using functools
+---------------
+
+Functools is defined as a Matlab package, which means the functions inside
+this package are called a bit differently that normal functions. In order to call the functions, their full namespace must be specified
+
+```matlab
+functools.list.head([1 2 3 4])
+```
+
+or a function can be imported specifically
+
+```matlab
+import functools.list.head
+head([1 2 3 4])
+```
+
+or an entire subpackage of functions can be imported.
+
+```matlab
+import functools.list.*
+head([1 2 3 4])
+```
+
+If you would like to use the functools functions inside your own function,
+the same import rules will apply.
+
+```matlab
+function out = add(a, b)
+    import functools.list.zipWith2
+
+    out = zipWith2(@plus, a, b);
+end
+```
