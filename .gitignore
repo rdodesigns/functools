@@ -1,0 +1,13 @@
+## MATLAB.
+*.asv
+*.mat
+
+## Ignore mac files.
+*.DS_Store
+
+## Tilde files.
+*~
+
+## Ignore vim files.
+*.swp
+
