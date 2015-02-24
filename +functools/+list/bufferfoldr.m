@@ -17,13 +17,14 @@
 %   See also FOLDL, FOLDR, FOLDL1, FOLDR1, BUFFERFOLDL
 
 function out = bufferfoldr(accumulator, initial)
-  import functools.list.foldr
 
   out = @fold;
 
   buffer = initial;
 
   function out = fold(in)
+    import functools.list.foldr
+
     if nargin == 0
       out = buffer;
       return;
