@@ -11,7 +11,22 @@
 %
 %  This is mostly useful for higher order functions and for partial
 %  application.
+%
+%  The function returned from flip is curried.
 
-function g = flip(f)
-  g = @(y, x) f(x, y);
+function out = flip(f)
+
+  function out = flipped(y, x)
+
+    narginchk(1, 2);
+
+    switch nargin
+      case 1, out = @(x) f(x, y);
+      case 2, out = f(x, y);
+    end
+
+  end
+
+  out = @flipped;
+
 end
