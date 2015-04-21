@@ -20,7 +20,8 @@
 %  ans =
 %       6
 
-function out = apply(f, c, x)
+function out = tryapply(f, c, x)
+  import functools.curry.apply;
 
   narginchk(1, 3);
 
